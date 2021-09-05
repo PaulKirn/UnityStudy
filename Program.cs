@@ -11,24 +11,23 @@ namespace СSLight
         static void Main(string[] args)
         {
             int money;
-            int eatCount;
-            int eatPrice = 10;
+            int crystalsCount;
+            int crystalPrice = 20;
             bool enoughMoney;
 
-            Console.WriteLine($"Добро пожаловать в наш фермерский магазин! Сегодня вся наша еда стоит {eatPrice} золотых монет.");
-            Console.WriteLine("Скажите, сколько у вас золота?");
+            Console.WriteLine($"Здравствуй, путник! В моей лавке все кристалы стоят {crystalPrice} золотых монет. Сколько у тебя монет?");
             Console.Write("Ваш ответ: ");
             money = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Скажите, сколько Вам нужно еды?");
+            Console.WriteLine("Прекрасно! Сколько кристалов тебе нужно?");
             Console.Write("Ваш ответ: ");
-            eatCount= Convert.ToInt32(Console.ReadLine());
+            crystalsCount = Convert.ToInt32(Console.ReadLine());
+            enoughMoney = money >= crystalsCount * crystalPrice;
+            crystalsCount *= Convert.ToInt32(enoughMoney);
+            money -= crystalsCount * crystalPrice;
+            Console.WriteLine($"У вас осталось {money} золотых монет");
+            Console.WriteLine($"Вы получили {crystalsCount} кристалов");
 
-            enoughMoney = money >= eatCount * eatPrice;
-            eatCount *= Convert.ToInt32(enoughMoney);
-            money -= eatCount * eatPrice;
 
-            Console.WriteLine($"У Вас осталось {money} золотых монет.");
-            Console.WriteLine($"Вы получили {eatCount} единиц еды.");
         }
     }
 }
