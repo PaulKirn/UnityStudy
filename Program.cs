@@ -10,7 +10,11 @@ namespace СSLight
     {
         static void Main(string[] args)
         {
-         // + - * / %
+            bool i = Convert.ToBoolean(0);
+            Console.WriteLine(i);
+            int j = Convert.ToInt32(i);
+            Console.WriteLine(j);
+
         }
     }
 }
