@@ -10,17 +10,22 @@ namespace СSLight
     {
         static void Main(string[] args)
         {
-            string name;
-            int age;
+            float health;
+            int armor;
+            int damage;
 
-            Console.Write("Введите ваше имя: ");
-            name = Console.ReadLine();
-            Console.Write($"Вас зовут - {name}. {name}, пожалуста, введите ваш возраст: ");
-            age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Спасибо, {name}! Ваш возраст {age}, вы можете продолжить просмотр материала.");
+            Console.Write("Введите количество жизней: ");
+            health = Convert.ToInt32(Console.ReadLine());
 
-            
+            Console.Write("Введите количество брони: ");
+            armor = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Введите количество урона: ");
+            damage = Convert.ToInt32(Console.ReadLine());
+
+            health -= Convert.ToSingle(damage) / 100 * armor;
+
+            Console.WriteLine($"Сила атаки составила {damage} урона. У вас осталось {health} жизней");
 
         }
     }
