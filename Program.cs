@@ -10,10 +10,17 @@ namespace СSLight
     {
         static void Main(string[] args)
         {
-            bool i = Convert.ToBoolean(0);
-            Console.WriteLine(i);
-            int j = Convert.ToInt32(i);
-            Console.WriteLine(j);
+            string name;
+            int age;
+
+            Console.Write("Введите ваше имя: ");
+            name = Console.ReadLine();
+            Console.Write($"Вас зовут - {name}. {name}, пожалуста, введите ваш возраст: ");
+            age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Спасибо, {name}! Ваш возраст {age}, вы можете продолжить просмотр материала.");
+
+            
+
 
         }
     }
