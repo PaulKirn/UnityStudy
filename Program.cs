@@ -10,23 +10,25 @@ namespace СSLight
     {
         static void Main(string[] args)
         {
-            float health;
-            int armor;
-            int damage;
+            int money;
+            int eatCount;
+            int eatPrice = 10;
+            bool enoughMoney;
 
-            Console.Write("Введите количество жизней: ");
-            health = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Добро пожаловать в наш фермерский магазин! Сегодня вся наша еда стоит {eatPrice} золотых монет.");
+            Console.WriteLine("Скажите, сколько у вас золота?");
+            Console.Write("Ваш ответ: ");
+            money = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Скажите, сколько Вам нужно еды?");
+            Console.Write("Ваш ответ: ");
+            eatCount= Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Введите количество брони: ");
-            armor = Convert.ToInt32(Console.ReadLine());
+            enoughMoney = money >= eatCount * eatPrice;
+            eatCount *= Convert.ToInt32(enoughMoney);
+            money -= eatCount * eatPrice;
 
-            Console.Write("Введите количество урона: ");
-            damage = Convert.ToInt32(Console.ReadLine());
-
-            health -= Convert.ToSingle(damage) / 100 * armor;
-
-            Console.WriteLine($"Сила атаки составила {damage} урона. У вас осталось {health} жизней");
-
+            Console.WriteLine($"Вы потратили {money} золотых монет.");
+            Console.WriteLine($"Вы получили {eatCount} единиц еды.");
         }
     }
 }
