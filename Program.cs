@@ -27,7 +27,7 @@ namespace СSLight
             eatCount *= Convert.ToInt32(enoughMoney);
             money -= eatCount * eatPrice;
 
-            Console.WriteLine($"Вы потратили {money} золотых монет.");
+            Console.WriteLine($"У Вас осталось {money} золотых монет.");
             Console.WriteLine($"Вы получили {eatCount} единиц еды.");
         }
     }
