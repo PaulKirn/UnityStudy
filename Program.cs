@@ -10,19 +10,21 @@ namespace СSLight
     {
         static void Main(string[] args)
         {
-            int people;
-            int timeOfreceipt = 10;
+            string name;
+            int age;
+            string zodiacSign;
+            string profession;
 
-            Console.WriteLine("Фиксированное время приема одного человека 10 минут.");
-            Console.Write("Введите количество людей в очереди: ");
-           
-            people = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Здравствуйте! Пожалуйста, введите Ваше имя:");
+            name = Console.ReadLine();
+            Console.Write("Введите Ваш возраст:");
+            age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите Ваш знак зодиака:");
+            zodiacSign = Console.ReadLine();
+            Console.Write("Введите Вашу профессию:");
+            profession = Console.ReadLine();
 
-            int totalTime = people * timeOfreceipt;
-            int hour = totalTime / 60;
-            int minutes = totalTime % 60;
-
-            Console.WriteLine($"Вы должны отстоять в очереди {hour} часа и {minutes} минут.");
+            Console.WriteLine($"Итак, Вас зовут {name} и вам {age} лет. Ваш знак зодиака {zodiacSign}, а Ваша профессия {profession}, все верно?");
 
 
 
